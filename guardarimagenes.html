@@ -1,0 +1,30 @@
+<html>
+<body>
+
+<html>
+<head>
+<title>Subida de ficheros a un servidor web</title>
+<meta charset="UTF-8">
+</head>
+<body>
+<h2>Subida de imagenes a un servidor</h2>
+<!-- el atributo enctype del form debe valer "multipart/form-data" -->
+<!-- el atributo method del form debe valer "post" -->
+<form  enctype="multipart/form-data" action="guardarimagenes.php" method="post">
+
+<!-- Se fija en el cliente el tamaño máximo en bytes ( no es seguro )
+ el limite máximo se debe tener el archivo se debe controlar también en el servidor (php.ini)-->
+
+<input type="hidden" name="MAX_FILE_SIZE" value="300000" /> 
+
+<label>Elija la primera imagen </label> <input name="imagen1" type="file" /> <br />
+<br>
+<label>Elija la segunda imagen </label> <input name="imagen2" type="file" /> <br />
+<br>
+<input type="submit"  name="boton" value="Subir imagenes" />
+</form>
+</body>
+</html>
+</body>
+
+</html>
